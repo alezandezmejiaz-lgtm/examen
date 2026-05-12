@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+ const carro = [
+    {
+      id:101, 
+      marca:"chebted", 
+      modelo:"erupeoo", 
+      precio:3000,
+    },
+     {
+      id:102, 
+      marca:"chloted", 
+      modelo:"japonse", 
+      precio:20000,
+    },
+     {
+      id:103, 
+      marca:"cbloted", 
+      modelo:"coreano", 
+      precio:16000,
+    },
+
+ ];
+
+ const vehiculoBuscado = carro.find(Element => Element.marca === "chloted");
+console.log("Vehículo encontrado:", vehiculoBuscado);
+
+//Filtrado:* Utiliza .filter() para obtener todos los vehículos cuyo precio sea mayor a 15,000 y muestra el nuevo arreglo.
+ console.log(carro.filter(Element =>Element.precio >15000))
+
+// Transformación:* Utiliza .map() para crear un nuevo arreglo que solo contenga los nombres de los modelos en mayúsculas (toUpperCase()).
+ const masyucula=carro.map(Element =>{
+return Element.modelo.toUpperCase()
+ });
+console.log(masyucula);
+//* *Cálculo:* Crea una variable totalPresupuesto y, usando un bucle for, suma el precio de todos los vehículos y muestra el resultado con el mensaje: "El valor del inventario es: X".
+var  totalPresupuesto= 0 ;
+for(i=0;i<carro.length;i++){
+  totalPresupuesto+=carro[i].precio;
+}
+console.log("El valor del inventario es:" + totalPresupuesto )
+
+
+</script>
+</body>
+</html>
